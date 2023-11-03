@@ -21,5 +21,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-![image](https://github.com/capstxr/weather/assets/114504520/814b8c5c-c3e6-4548-94dd-e7244f4a258d)
-![image](https://github.com/capstxr/weather/assets/114504520/bdf28802-25c0-4b04-b891-33c1d9528c8c)
+![image](https://github.com/capstxr/weather/assets/114504520/02db9223-ef58-421b-ae29-36a53d8a8384)
+![image](https://github.com/capstxr/weather/assets/114504520/25e2461e-8da5-43f3-91d0-cf540241f908)
