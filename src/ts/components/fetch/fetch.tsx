@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function Fetch(query: string) {
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=99f57005ddbf46cc9f462144230211&q=${query}&days=7`;
+    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=<your_key>&q=${query}&days=7`;
 
     const headers = {
         'Content-Type': 'application/json',
