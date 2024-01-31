@@ -29,7 +29,7 @@ const Home = (props: Props) => {
     }
 
     const toggleSearch = () => {
-        if (closed == 'closed') {
+        if (closed === 'closed') {
             setClosed('');
         } else {
             setClosed('closed');

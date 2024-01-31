@@ -52,7 +52,7 @@ const Forecast = (props: Props) => {
     const date = getDate();
 
     const toggleReport = () => {
-        if (reportState == 'closed') {
+        if (reportState === 'closed') {
             setReportState('');
         } else {
             setReportState('closed');
@@ -99,7 +99,7 @@ const Forecast = (props: Props) => {
 
     const WeatherBall = (props: BallProps) => {
         const { temp, icon, timestamp, index } = props;
-        const act = index ==  1;
+        const act = index ===  1;
 
         return (
             <div className={`weather-ball ${act}`}>
