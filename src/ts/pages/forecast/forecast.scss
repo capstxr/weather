@@ -1,0 +1,311 @@
+.container {
+    width: 100%;
+    height: calc(100% - 74px);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 42px;
+    align-items: center;
+    position: relative;
+    padding: 36px;
+    padding-top: 64px;
+    overflow: hidden;
+}
+
+.location img {
+    margin-top: -5px;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(3px 3px 10px rgba(0,0,0,0.25));
+}
+
+.stats {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3rem;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.degree {
+    font-size: 2.75rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    letter-spacing: 0.75px;
+}
+
+.weather {
+    font-size: 1.5rem;
+}
+
+.stat-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    width: 150px !important;
+    height: 30px;
+    font-size: 1.05rem;
+    justify-content: start;
+    align-items: center;
+
+    .icon-container {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .name {
+        width: 35px;
+    }
+
+    .num {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    border-right: 1px solid var(--white);
+    box-shadow: -2px -2px 5px rgba(0,0,0,0.2);
+}
+
+.forecast-btn {
+    position: absolute;
+    bottom: 56px;
+    border: none;
+    background-color: var(--white);
+    border-radius: 50px;
+    padding: 12px 36px;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 25px rgba(0,0,0,0.3);
+    cursor: pointer;
+
+    span {
+        font-size: 1.1rem;
+        letter-spacing: 0.75px;
+    }
+}
+
+.report {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-color: var(--blue-1);
+    transition: 0.75s ease-in-out all;
+    transform: translateY(-100%);
+    box-shadow: 2px 2px 25px rgba(0,0,0,0.2);
+
+    .header {
+        width: 100%;
+        height: 100px;
+        padding: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            color: #fff;
+            font-size: 1.1rem;
+            letter-spacing: 0.75px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            text-transform: capitalize;
+        }
+    }
+
+    .header-btn {
+        height: 24px;
+        width: max-content;
+        border: none;
+        outline: none;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+
+        .text {
+            color: #fff;
+            font-size: 1.1rem;
+            letter-spacing: 0.75px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+    }
+
+    .content {
+        width: 100%;
+        padding: 24px;
+        color: #fff;
+        font-size: 1.1rem;
+        letter-spacing: 0.75px;
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        text-shadow: 2px 4px 2px rgba(0,0,0,0.2);
+        overflow: hidden;
+        height: calc(100% - 100px);
+    }
+
+    .report-heading {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .date {
+            text-shadow: 1px 3px 5px rgba(0,0,0,0.2);
+            font-size: 1.35rem;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+    }
+}
+
+.today-grid {
+    margin-top: 14px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    justify-content: start;
+    align-items: center;
+    overflow-x: auto;
+    padding-bottom: 14px;
+    height: 25vh;
+}
+
+.weather-ball {
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 14px;
+}
+
+.weather-ball.true {
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    background-color: rgba(255, 255, 255, 0.30);
+    border-radius: 10px;
+    box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.15);
+}
+
+.weekly-grid {
+    height: 40vh;
+    overflow-y: auto;
+}
+
+.weeklyball {
+    width: calc(100% - 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+    .icon {
+        filter: drop-shadow(3px 3px 10px rgba(0,0,0,0.2));
+    }
+}
+
+.report.closed {
+    transform: translateY(5px);
+}
+
+@media screen and (min-width: 400px) {
+    .wrapper .container {
+        justify-content: start;
+        padding-top: 16px;
+    }
+
+    .report {
+        width: 390px;
+        aspect-ratio: 9 / 18;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .today-grid {
+        height: 205px;
+    }
+
+    .weekly-grid {
+        height: 260px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .today-grid {
+        height: 30vh;
+        margin-top: 0;
+        padding-bottom: 7px;
+    }
+
+    .weather-ball {
+        height: 135px;
+        font-size: 0.95rem;
+
+        .icon {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    .weekly-grid {
+        height: 30vh;
+    }
+
+    .report .content {
+        gap: 12px;
+    }
+
+    .weeklyball {
+        font-size: 0.95rem;
+
+        .icon {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
