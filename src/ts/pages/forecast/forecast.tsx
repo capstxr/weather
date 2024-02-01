@@ -137,13 +137,13 @@ const Forecast = (props: Props) => {
 
                 <span className="temps">
                     <span>
-                        {mintemp}°C
+                        {maxtemp}°C
                     </span>
 
                     <span> / </span>
 
                     <span>
-                        {maxtemp}°C
+                        {mintemp}°C
                     </span>
                 </span>
             </div>
